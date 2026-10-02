@@ -21,6 +21,7 @@ Before tech, I spent 15+ years in professional music: gigging, touring, coordina
 - **Learning:** Terraform, Kubernetes, Podman, Cloud (evaluating AWS vs Azure)
 - **Core stack:** Linux, Docker, SSH, VPN (Tailscale), UFW, systemd, shell scripting, Python, C/C++, Git, networking, self-hosting
 - **Open to** DevOps, Cloud Engineering and SRE opportunities — reach me: cgarrote92@gmail.com
+- **CV:** [my full resume (PDF)](https://raw.githubusercontent.com/garrotini/cv/main/CV_Carlos_Garrote.pdf)
 
 ## Fun/random facts
 

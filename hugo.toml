@@ -119,6 +119,19 @@ theme = "gokarna"
 		pre = "<span data-feather='linkedin'></span>"
 		post = ""
 
+	[[menu.main]]
+		identifier = "cv"
+
+		# CV PDF served straight from the garrotini/cv repo (raw.githubusercontent)
+		url = "https://raw.githubusercontent.com/garrotini/cv/main/CV_Carlos_Garrote.pdf"
+		weight = 6
+
+		pre = "<span data-feather='download'></span>"
+		post = ""
+
+		[menu.main.params]
+			newPage = true
+
 
 [markup]
   [markup.tableOfContents]
