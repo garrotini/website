@@ -10,7 +10,7 @@ type: "page"
 
 I'm Carlos Garrote and I live in Lisbon, Portugal.
 
-I'm a software engineering student at [42 Lisboa](https://42lisboa.com/) (C, C++, Linux, networking), and at home I'm building my cloud/infrastructure career the hands-on way with several experiments on my [Home Lab](homelab.md).
+I'm a software engineering student at [42 Lisboa](https://42lisboa.com/) (C, C++, Linux, networking), and at home I'm building my cloud/infrastructure career the hands-on way with several experiments on my [Home Lab](/homelab/).
 
 ## Career changer
 
