@@ -13,8 +13,8 @@ theme = "gokarna"
 	# accentColor = "#ECF00C"
 	accentColor = "#ADADB0"
 
-	# fontSize = "1.1rem" # equal to 17.6px
-	fontSize = "0.7rem"
+	fontSize = "1.1rem" # equal to 17.6px
+	# fontSize = "0.7rem"
 
 	# Resource URL for the site avatar (home page and header)
 	avatarURL = "https://avatars.githubusercontent.com/u/129984114?v=4"
@@ -68,16 +68,16 @@ theme = "gokarna"
 
 [menu]
   [[menu.main]]
-    name = "Home"
-    pre = "<span data-feather='home'></span>"
-    url = "/"
+    name = "About"
+    pre = "<span data-feather='user'></span>"
+    url = "/about/"
     weight = 1
 
   [[menu.main]]
     name = "Posts"
     pre = "<span data-feather='book'></span>"
     url = "/posts/"
-    weight = 2
+    weight = 3
 
   [[menu.main]]
     name = "Projects"
@@ -89,7 +89,7 @@ theme = "gokarna"
     name = "Tags"
     pre = "<span data-feather='tag'></span>"
     url = "/tags/"
-    weight = 3
+    weight = 4
 
 	[[menu.main]]
 		# Unique identifiers are required for menu entries without a name property,
@@ -98,7 +98,7 @@ theme = "gokarna"
 
 		# Absolute URL to external resource
 		url = "https://github.com/garrotini"
-		weight = 4
+		weight = 5
 		
 		# Surround the menu entry (or name) with HTML content, such as Feather
 		# icons: https://feathericons.com
@@ -112,7 +112,7 @@ theme = "gokarna"
 
 		# Absolute URL to external resource
 		url = "https://linkedin.com/in/garrotini"
-		weight = 4
+		weight = 5
 		
 		# Surround the menu entry (or name) with HTML content, such as Feather
 		# icons: https://feathericons.com
