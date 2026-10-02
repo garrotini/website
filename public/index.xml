@@ -1,2 +1,70 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Carlos Garrote</title><link>http://localhost:1313/</link><description>Recent content on Carlos Garrote</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 02 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>http://localhost:1313/about/</link><pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate><guid>http://localhost:1313/about/</guid><description>&lt;p&gt;I break things on my own server so nothing breaks on a production one.&lt;/p&gt;
-&lt;p&gt;Trained software engineer at &lt;a href="https://42lisboa.com/"&gt;42 Lisboa&lt;/a&gt; (C, C++, Linux, networking), building my cloud/infrastructure career the hands-on way: I run a Linux-first home lab on repurposed hardware — a multi-service Docker stack (media, file sync, document pipeline) that I administer over SSH via Tailscale, manage with Portainer, and back up with rsync. Currently extending it with Terraform and Kubernetes, and evaluating AWS vs Azure as its first cloud target.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Carlos Garrote</title><link>http://localhost:1313/</link><description>Recent content on Carlos Garrote</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 02 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml"/><item><title>About</title><link>http://localhost:1313/about/</link><pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate><guid>http://localhost:1313/about/</guid><description>&lt;h3 id="hey-you"&gt;&lt;strong&gt;Hey you&amp;hellip; You came to my place, let me introduce myself!&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;I&amp;rsquo;m Carlos Garrote and I live in Lisbon, Portugal.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m a software engineering student at &lt;a href="https://42lisboa.com/"&gt;42 Lisboa&lt;/a&gt; (C, C++, Linux, networking), and at home I&amp;rsquo;m building my cloud/infrastructure career the hands-on way with several experiments on my &lt;a href="homelab.md"&gt;Home Lab&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="career-changer"&gt;Career changer&lt;/h2&gt;
+&lt;p&gt;Before tech, I spent 15+ years in professional music: gigging, touring, coordinating a multi-school creative songwriting program for 250+ students a year, teaching in challenging environments, and performing nightly on cruise ships.&lt;/p&gt;</description></item><item><title>Home Lab</title><link>http://localhost:1313/homelab/</link><pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate><guid>http://localhost:1313/homelab/</guid><description>&lt;p&gt;My home lab is where I do my learning!&lt;/p&gt;
+&lt;p&gt;It consists of a Linux server on repurposed hardware — an old laptop running a multi-service Docker stack that I use every day: media, music, and a document pipeline.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s the real system behind &amp;ldquo;I break things on my own server so nothing breaks on a production one.&amp;rdquo;&lt;/p&gt;
+&lt;h2 id="right-now"&gt;Right Now&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ┌────────────────────────────┐
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; laptop/desktop │ HOME SERVER │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ─────────────── │ Debian 12 - old laptop │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; │ │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; SSH (LAN) ────────▶│ Docker ┌───────────────┐ │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; SSH over Tailscale ────▶│ │ Jellyfin │ │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; │ │ Navidrome │ │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; │ │ Stirling-PDF │ │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; │ │ Downtify │ │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; │ └───────────────┘ │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; │ systemd · UFW │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; └─────────────┬──────────────┘
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; │ rsync
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ▼
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; config &amp;amp; document backups
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="services"&gt;Services&lt;/h2&gt;
+&lt;h3 id="running-right-now-oct-2026"&gt;Running right now (Oct 2026)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Jellyfin&lt;/strong&gt; - media server, streaming my tv shows and movies library&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Navidrome&lt;/strong&gt; - music streaming server, that I connect to using an Android client app called &lt;strong&gt;Reasonus&lt;/strong&gt; (kind of a Spotify clone)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stirling-PDF&lt;/strong&gt; - a great PDF toolbox complement to the cli-tool &lt;strong&gt;pdfunite&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Downtify&lt;/strong&gt; - because sometimes it makes sense to store music locally&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="other-useful-apps-not-containerized"&gt;Other useful apps, not containerized&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;docling&lt;/strong&gt; - document parsing pipeline (converting pdfs or yt videos to md has been great for learning!)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;yt-dlp&lt;/strong&gt; - also, because sometimes it&amp;rsquo;s easier to digest content if they&amp;rsquo;re stored locally&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ollama&lt;/strong&gt; - testing small local models. wouldn&amp;rsquo;t it be nice to run local AI models on your consumer devices?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;rsync&lt;/strong&gt; - great tool for copying and syncing between devices inside the same network (or even the same device. it&amp;rsquo;s such a powerfull &lt;code&gt;cp&lt;/code&gt; command!)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="apps-i-tried-in-the-past"&gt;Apps I tried in the past&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;OpenCloud&lt;/strong&gt; and &lt;strong&gt;NextCloud&lt;/strong&gt; - in the search for finding a great file sync and sharing between devices&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Syncthing&lt;/strong&gt; - same quest as mentioned before (sync across devices)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Immich&lt;/strong&gt; - Self-hosted photo library, a replacement for Google Photos&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Paperless-ng&lt;/strong&gt; - I dream on having this service properly setup and fully functional for my needs&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pi-hole&lt;/strong&gt; - I messed up a few times with this. It blocks ads and tracker but it might affect other users on your network (still need to configure it properly)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Portainer&lt;/strong&gt; - it was great to see in a clean web page all the container management, but then I forced myself to be in the CLI&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="what-it-taught-me"&gt;What it taught me&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Linux administration (systemd, users, permissions, UFW firewall)&lt;/li&gt;
+&lt;li&gt;Remote administration over SSH or SSH via Tailscale — no exposed ports&lt;/li&gt;
+&lt;li&gt;Docker networking and volumes&lt;/li&gt;
+&lt;li&gt;Full container lifecycle: updates, permissions, and health in my hands&lt;/li&gt;
+&lt;li&gt;Backups of configuration and documents kept in sync with rsync&lt;/li&gt;
+&lt;li&gt;Shell scripting for automation&lt;/li&gt;
+&lt;li&gt;Backup strategies and cron jobs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="next"&gt;Next&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;extending the lab with Terraform and Kubernetes&lt;/li&gt;
+&lt;li&gt;testing Podman as a Docker alternative&lt;/li&gt;
+&lt;li&gt;evaluating AWS vs Azure as my first cloud target.&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Projects</title><link>http://localhost:1313/projects/</link><pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate><guid>http://localhost:1313/projects/</guid><description>&lt;h2 id="home-lab"&gt;&lt;a href="http://localhost:1313/homelab/"&gt;Home Lab&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Self-hosted infrastructure — Linux, Docker, Bash&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Linux server on repurposed hardware running a multi-service Docker stack for daily use (media, photos, file sync, document pipeline), administered remotely over SSH and backed up with rsync. &lt;a href="http://localhost:1313/homelab/"&gt;Full write-up&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="set_"&gt;&lt;a href="https://github.com/garrotini/set_deb12"&gt;set_deb12&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Automated Debian 12 provisioning — Bash, Docker, i3&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Scripted setup that turns a fresh Debian 12 VM into a fully provisioned workstation in one pass: package installs, Docker Engine, and i3/tmux/vim/alacritty dotfiles.
+Solved real toolchain-compatibility work — bridging GCC differences between daily Fedora (GCC 15) and 42 school systems (Ubuntu 22.04, GCC 11) for C graphics projects.
+The tuned VM profile boots using ~200–230MB RAM, leaving full resources for compilation workloads.&lt;/p&gt;</description></item></channel></rss>
