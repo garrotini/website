@@ -1,0 +1,52 @@
+name: deploy
+
+on:
+  push:
+    branches: ["main"]    # every push to main deploys
+  workflow_dispatch:      # adds a "Run workflow" button in the Actions tab
+
+permissions:
+  contents: read          # clone the repo
+  pages: write            # publish to Pages
+  id-token: write         # OIDC auth to Github's deployment backend
+
+concurrency:
+  group: "pages"          # only one deploy at a time
+  cancel-in-progress: false # a deploy mid-flight finishes (dont serve half-updates!)
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          submodules: true  # clones themes/gokarna at the pinned commit
+                            # without this, Hugo would fail!
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.162.1" # pin = your local version, so CI matches dev
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5  #reads static/CNAME, links the domain
+
+      - name: Build
+        run: hugo --minify --gc   # --gc prunes stale files, --minify already in your config too
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
